@@ -9,4 +9,4 @@
 
 # 3. Output
 print('Hello university!')
-print("I like professor Kim's class")
+print("Today is Wedensday")
