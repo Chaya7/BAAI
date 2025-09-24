@@ -1,11 +1,15 @@
 #
-# Chaya, 2025/9/24
-# file: Chaya_sum.py
-# Short description of the task
+# Chaya, 2025/09/24
+# File: Chaya_sum.py
+# Add two numbers then print
 #
 
 # 1. Input
+x=8
+y=7
 
-# 2. Process
+#2. process
+Sum=x+y
 
-# 3. Output
+#3. output
+print(F'Result (Sum)')
