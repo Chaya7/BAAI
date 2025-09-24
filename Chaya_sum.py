@@ -12,4 +12,4 @@ y=7
 Sum=x+y
 
 #3. output
-print(F'Result (Sum)')
+print(F'Result {Sum}')
