@@ -1,6 +1,6 @@
 #
-# Chaya
-# file name 0_template.py
+# Chaya, 2025/09/24
+# file: 0_template.py
 # Short description of the task
 #
 
