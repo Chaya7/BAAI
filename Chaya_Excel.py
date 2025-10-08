@@ -11,6 +11,9 @@ df = pd.read_excel('Financial_Sample.xlsx')
 
 # 2. Process
 sum = df.select_dtypes(include='number').sum()
+sums ['Name'] = 'total' 
+df_with_total = pd.contat([df, pd.DataFrame(sums)]),ignore_index=True
 
 # 3. Output
-print(f'Sum {sum}')
+print(df_with_total)
+df_with_total.to_excel('otput.xlsx', index=False)
