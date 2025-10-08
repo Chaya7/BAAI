@@ -8,5 +8,4 @@
 # 2. Process
 
 # 3. Output
-print('Hello university!')
-print("Today is Wedensday")
+print('Hello THU!')
