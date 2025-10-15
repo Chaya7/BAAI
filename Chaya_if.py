@@ -5,8 +5,13 @@
 #
 
 # 1. Input
+order_value=[120, 450, 80, 300, 650]
+total_revenue = 0
 
 # 2. Process
-for i in range(1,6):
-    print(f"count:{i}", end=" ")
+for order in order_value:
+    total_revenue+= order
+    print(f"Processing order: ${order}")
+
+print(f"\nTotal Revenue: ${total_revenue}")
 # 3. Output
