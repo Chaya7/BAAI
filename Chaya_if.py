@@ -5,10 +5,14 @@
 #
 
 # 1. Input
-temperature = 30 
+sale = 15000
+target = 10000
 
 # 2. Process
-if temperature > 25: 
-    print("It's too hot outside. Study hard in the library")
+if sale > target:
+    print("Congragulation! Sales target achieved")
+    Bonus = sale * 0.5
+    print(f"Bonus earned: ${Bonus}")
+
 
 # 3. Output
