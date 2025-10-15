@@ -14,4 +14,5 @@ for order in order_value:
     print(f"Processing order: ${order}")
 
 print(f"\nTotal Revenue: ${total_revenue}")
+
 # 3. Output
