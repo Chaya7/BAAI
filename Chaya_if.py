@@ -8,5 +8,5 @@
 
 # 2. Process
 for i in range(1,6):
-    print(f"count:{i}")
+    print(f"count:{i}", end=" ")
 # 3. Output
