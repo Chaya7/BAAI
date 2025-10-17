@@ -7,12 +7,6 @@
 # 1. Input
 
 # 2. Process
-total_original = 0
-total_discount = 0
-total_final = 0
-
-print("=== PRODUCT DISCOUNT CALCULATOR ===\n")
-
 products = [
     {"name":"Laptop", "price": 1200, "category": "Electronics"},
     {"name":"Shirt", "price":45, "category":"Clothing"},
@@ -23,11 +17,21 @@ products = [
     {"name":"Book", "price":25, "category":"Books"},
     {"name":"Headphones", "price":150, "category":"Electronics"}]
 
+print("=== PRODUCT DISCOUNT CALCULATOR ===\n")
+
+total_original = 0
+total_discount = 0
+total_final = 0
+total_products = 0
+  
 for product in products:
+    total_products += 1 
+
     name = product["name"]
     price = product["price"]
     category = product["category"]
 
+       
 if category == "Electronics":
     if price >= 1000:
         discount = 20
@@ -45,8 +49,21 @@ elif category == "Clothing":
 elif category == "Books":
     discount = 10
 
-print(f"The discount for this product is {discount}%")
+final_price = price*(1-discount/100)
+
+ # calculat totals to summarize
+total_original += price
+total_discount += price*discount/100
+total_final += price 
+
+print(f'Product: {name} Category: {category}')
+print(f'Original Price: ${price:.2f} Discount: {discount}%')
+print(f'Final Price: ${final_price:.2f}\n')
 
 print("\n=== SUMMARY ===")
+print(f"Total Products: {total_products}")
+print(f"total Original Price: ${total_original:.2f}")
+print(f"total Discount amount: ${total_discount:.2f}")
+print(f"total Final Price: ${total_final:.2f}")
 
 # 3. Output
