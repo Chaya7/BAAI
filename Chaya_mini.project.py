@@ -32,33 +32,35 @@ for product in products:
     category = product["category"]
 
        
-if category == "Electronics":
-    if price >= 1000:
-        discount = 20
-    elif price >= 500:
-        discount = 15
-    else:
-        discount = 10
+    if category == "Electronics":
+        if price >= 1000:
+            discount = 20
+        elif price >= 500:
+            discount = 15
+        else:
+            discount = 10
 
-elif category == "Clothing":
-    if price >= 100:
-        discount = 25
-    else:
-        discount = 15
+    elif category == "Clothing":
+        if price >= 100:
+            discount = 25
+        else:
+            discount = 15
 
-elif category == "Books":
-    discount = 10
+    elif category == "Books":
+            discount = 10
 
-final_price = price*(1-discount/100)
+    final_price = price*(1-discount/100)
 
  # calculat totals to summarize
-total_original += price
-total_discount += price*discount/100
-total_final += price 
+    total_original += price
+    total_discount += price*discount/100
+    total_final += final_price
 
-print(f'Product: {name} Category: {category}')
-print(f'Original Price: ${price:.2f} Discount: {discount}%')
-print(f'Final Price: ${final_price:.2f}\n')
+    print(f"Product: {name}")
+    print(f"   Category: {category}")
+    print(f"   Original Price: ${price:.2f}")
+    print(f"   Discount: {discount}%")
+    print(f"   Final Price: ${final_price:.2f}\n")
 
 print("\n=== SUMMARY ===")
 print(f"Total Products: {total_products}")
