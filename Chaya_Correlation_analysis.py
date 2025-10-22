@@ -7,10 +7,12 @@
 import pandas as pd
 
 # 1. Input
-df = pd.read_csv('Correlation_Analysis_Data.csv')
+df = pd.read_csv('simple_data.csv')
 
 # 2. Process
+print(df.isnull().sum())
+print(df.isnull().sum().sum())
 
-# 3. Output
-print("print data loaded successfully!")
-print(f"Dataset shape:{df.shape}")
+# # 3. Output
+# print("Data loaded successfully!")
+# print(f"Dataset shape:{df.shape}")
