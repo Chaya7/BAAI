@@ -7,6 +7,9 @@
 import pandas as pd
 import numpy as np
 from scipy import stats
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 
 # 1. Input
 df = pd.read_csv('Correlation_Analysis_Data.csv')
@@ -21,10 +24,14 @@ df.info()
 # print(df.isnull().sum().sum())
 correlation_matrix=df.iloc[:,1:6]. corr()
 
-print(correlation_matrix)
+print(correlation_matrix.round(3))
 
 # # 3. Output
 # print("Data loaded successfully!")
 # print(f"Dataset shape:{df.shape}")
 # print(f'Correlation:{correlation:.2f}')
 # print(f'Pvalue:{pvalue}')
+sns.heatmap(correlation_matrix)
+plt.title('Chaya is the most intelligent person in the world')
+plt.tight_layout()
+plt.show()
