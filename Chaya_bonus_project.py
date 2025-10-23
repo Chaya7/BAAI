@@ -1,5 +1,5 @@
 #
-# mini, 2025/10/23
+# Chaya, 2025/10/23
 # File: Chaya_bonus_project.py
 # Short description of the task
 #
