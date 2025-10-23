@@ -18,13 +18,13 @@ for index, row in df.iterrows():
     # met target = bonus 10%
     if sales >= target:
         status = "Target Met"
-        bonus = int(sales*0.1)
+        bonus = int(sales*0.10)
 
     # not met target = bonus 5%
     else:
         status = "Target Not Met"
-        Bonus = int(sales*0.05)
-    print(f"{name}| {status} | Sales:${sales:,}| Bonus:${bonus:,}")
+        bonus = int(sales*0.05)
+    print(f"{name}| {status} | Sales:${sales:,} | Bonus:${bonus:,}")
 
     # accumulate total bonus
     total_bonus += bonus
