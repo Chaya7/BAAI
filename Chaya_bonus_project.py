@@ -7,11 +7,26 @@
 import pandas as pd
 df = pd.read_excel('sales_data.xlsx')
 
-print(df)
-# 1. Input (provide the dataset) 
+total_bonus = 0
+# use loop to go through each employee
+for index, row in df.iterrows():
+    name = row['Employee_name']
+    sales = row['monthly_sales']
+    target = row['Sales_Target']
 
+    # check whether they met the target and the bonus
+    # met target = bonus 10%
+    if sales >= target:
+        status = "Target Met"
+        bonus = int(sales*0.1)
 
-# 2. Process
+    # not met target = bonus 5%
+    else:
+        status = "Target Not Met"
+        Bonus = int(sales*0.05)
+    print(f"{name}| {status} | Sales:${sales:,}| Bonus:${bonus:,}")
 
+    # accumulate total bonus
+    total_bonus += bonus
 
-# 3. Output
+print(f"\nTotal Bonuses to Pay: ${total_bonus:,}")
