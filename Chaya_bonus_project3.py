@@ -9,11 +9,13 @@ import pandas as pd
 df = pd.read_excel('customers.xlsx')
 
 # 2. Process
+# insert the data
 vip = []
 regular = []
 new = []
 total_vip_revenue = 0
 
+# give the vip standard
 for index, row in df.iterrows():
     name = row['Customer_Name']
     total = row['Total_Purchases']
@@ -29,6 +31,7 @@ for index, row in df.iterrows():
 
 
 # 3. Output
+# output the result in the organized orderchan
 print('CUSTOMER SEGMENTATION REPORT')
 print('='*15)
 
